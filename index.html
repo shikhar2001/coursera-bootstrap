@@ -261,6 +261,14 @@
                             <span class="carousel-control-next-icon"></span>
                         </a>
                     </div>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -391,6 +399,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#mycarousel').carousel({interval:2000});
+            $('#carousel-pause').click(function(){
+                $("#mycarousel").carousel('pause');
+            })
+            $('#carousel-play').click(function () {
+                $('#mycarousel').carousel('cycle');
+            })
+        })
+    </script>
 </body>
 
 </html>
